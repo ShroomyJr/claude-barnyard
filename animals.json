@@ -1,16 +1,16 @@
 {
   "animals": [
     { "name": "Cat",     "emoji": "🐱", "sound_file": "cat.wav" },
-    { "name": "Dog",     "emoji": "🐶", "sound_file": "dog.wav" },
     { "name": "Cow",     "emoji": "🐮", "sound_file": "cow.wav" },
+    { "name": "Dog",     "emoji": "🐶", "sound_file": "dog.wav" },
     { "name": "Duck",    "emoji": "🦆", "sound_file": "duck.wav" },
     { "name": "Frog",    "emoji": "🐸", "sound_file": "frog.wav" },
     { "name": "Horse",   "emoji": "🐴", "sound_file": "horse.wav" },
-    { "name": "Pig",     "emoji": "🐷", "sound_file": "pig.wav" },
-    { "name": "Sheep",   "emoji": "🐑", "sound_file": "sheep.wav" },
-    { "name": "Owl",     "emoji": "🦉", "sound_file": "owl.wav" },
     { "name": "Lion",    "emoji": "🦁", "sound_file": "lion.wav" },
     { "name": "Monkey",  "emoji": "🐒", "sound_file": "monkey.wav" },
-    { "name": "Rooster", "emoji": "🐓", "sound_file": "rooster.wav" }
+    { "name": "Owl",     "emoji": "🦉", "sound_file": "owl.wav" },
+    { "name": "Pig",     "emoji": "🐷", "sound_file": "pig.wav" },
+    { "name": "Rooster", "emoji": "🐓", "sound_file": "rooster.wav" },
+    { "name": "Sheep",   "emoji": "🐑", "sound_file": "sheep.wav" }
   ]
 }

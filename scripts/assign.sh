@@ -51,7 +51,7 @@ python3 - \
     "$(to_native "$SESSIONS_DIR")" \
     "$(to_native "$SESSION_FILE")" \
     "$ANIMAL_NAME" <<'PYEOF'
-import json, pathlib, random, sys
+import json, pathlib, sys
 
 animals_file  = sys.argv[1]
 sessions_dir  = pathlib.Path(sys.argv[2])
@@ -74,7 +74,7 @@ else:
         except Exception:
             pass
     available = [a for a in all_animals if a["name"] not in taken] or all_animals
-    chosen = random.choice(available)
+    chosen = available[0]
 
 session_file.write_text(json.dumps(chosen, ensure_ascii=False), encoding='utf-8')
 print(chosen["emoji"] + " " + chosen["name"])

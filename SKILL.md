@@ -95,22 +95,22 @@ Run the list script:
 bash ~/.claude/skills/animal-session-notifier/scripts/list-animals.sh
 ```
 
-It returns a JSON array. Render it as a markdown table like this example:
+It returns a JSON array in alphabetical order. Render it as a markdown table with a 1-based ordinal column — the ordinal tells the user which window number each animal represents:
 
-| | Animal | Status |
-|---|---|---|
-| 🐱 | Cat | **This session** |
-| 🐶 | Dog | Available |
-| 🐮 | Cow | Available |
-| 🦆 | Duck | Other session |
-| 🐸 | Frog | Available |
-| 🐴 | Horse | Available |
-| 🐷 | Pig | Available |
-| 🐑 | Sheep | Available |
-| 🦉 | Owl | Available |
-| 🦁 | Lion | Available |
-| 🐒 | Monkey | Available |
-| 🐓 | Rooster | Available |
+| # | | Animal | Status |
+|---|---|---|---|
+| 1 | 🐱 | Cat | **This session** |
+| 2 | 🐮 | Cow | Available |
+| 3 | 🐶 | Dog | Available |
+| 4 | 🦆 | Duck | Other session |
+| 5 | 🐸 | Frog | Available |
+| 6 | 🐴 | Horse | Available |
+| 7 | 🦁 | Lion | Available |
+| 8 | 🐒 | Monkey | Available |
+| 9 | 🦉 | Owl | Available |
+| 10 | 🐷 | Pig | Available |
+| 11 | 🐓 | Rooster | Available |
+| 12 | 🐑 | Sheep | Available |
 
 - `status: "this_session"` → **This session**
 - `status: "other_session"` → Other session
