@@ -1,0 +1,6 @@
+# Keep shell scripts and bats tests with LF line endings on all platforms
+*.sh    text eol=lf
+*.bats  text eol=lf
+
+# Treat WAV files as binary — no diff, no CRLF conversion
+*.wav   binary
