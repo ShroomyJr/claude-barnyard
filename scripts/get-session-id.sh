@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
-# Walk process tree upward looking for a claude ancestor PID.
-# Output that PID as the stable session identifier.
-# Fall back to 0 if not found (both assign and notify use the same fallback
-# so they still agree on the animal even when traversal fails).
+# Return a stable session ID for the current Claude Code session.
+# Prefers CLAUDE_CODE_SESSION_ID (set by Claude Code in all child processes).
+# Falls back to process-tree walk (macOS/Linux) then sentinel 0.
 
+# Fast path: Claude Code always exports this env var into hook subprocesses
+if [[ -n "${CLAUDE_CODE_SESSION_ID:-}" ]]; then
+    echo "$CLAUDE_CODE_SESSION_ID"
+    exit 0
+fi
+
+# Fallback: walk process tree looking for a claude ancestor PID
 get_parent_pid() {
     local pid="$1"
     ps -p "$pid" -o ppid= 2>/dev/null | tr -d ' '
