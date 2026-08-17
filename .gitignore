@@ -1,0 +1,4 @@
+# Runtime session state — not part of the skill package
+sessions/
+*.swp
+.DS_Store
